@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Trivia</title>
+</head>
+<body>
+    <h1>Trivia Rápida</h1>
+    {% for p in preguntas %}
+        <div>
+            <h3>{{ p.pregunta }}</h3>
+            {% for op in p.opciones %}
+                <button>{{ op }}</button>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
